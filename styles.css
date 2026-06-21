@@ -8,7 +8,7 @@
 .container {
     width: 100%;
     min-height: 100vh;
-    background: linear-gradient(135deg, #B4EDB3, #22A020);
+    background: linear-gradient(135deg, #b4edb3, #22a020);
     padding: 10px;
 }
 
@@ -22,7 +22,7 @@
 }
 
 .todos h2 {
-    color: #23BB19;
+    color: #23bb19;
     display: flex;
     align-items: center;
     margin-bottom: 20px;
@@ -50,12 +50,25 @@ input {
 button {
     border: none;
     outline: none;
-    background-color: #23BB19;
+    background-color: #23bb19;
     color: white;
     padding: 16px 50px;
     font-size: 16px;
     cursor: pointer;
     border-radius: 30px;
+}
+
+select {
+    margin-right: 3px;
+    border: none;
+    outline: none;
+    background-color: #23bb19;
+    color: white;
+    padding: 16px 16px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 30px;
+    text-align: center;
 }
 
 ul li {
@@ -68,7 +81,7 @@ ul li {
 }
 
 ul li::before {
-    content: '';
+    content: "";
     position: absolute;
     height: 28px;
     width: 28px;
