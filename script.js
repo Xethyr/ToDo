@@ -1,5 +1,5 @@
 const addTaskBtn = document.querySelector(".add-task-btn");
-const listContainer = document.getElementById("list-container");
+const listContainerNone = document.getElementById("list-container-none");
 const taskInput = document.getElementById("input-box");
 
 const addTask = () => {
@@ -8,7 +8,7 @@ const addTask = () => {
   } else {
     let li = document.createElement("li");
     li.innerHTML = taskInput.value;
-    listContainer.appendChild(li);
+    listContainerNone.appendChild(li);
     let span = document.createElement("span");
     span.innerHTML = "\u00d7";
     li.appendChild(span);
@@ -17,7 +17,7 @@ const addTask = () => {
   saveData();
 };
 
-listContainer.addEventListener("click", (e) => {
+listContainerNone.addEventListener("click", (e) => {
   if (e.target.tagName === "LI") {
     e.target.classList.toggle("checked");
     saveData();
@@ -28,11 +28,11 @@ listContainer.addEventListener("click", (e) => {
 });
 
 const saveData = () => {
-  localStorage.setItem("data", listContainer.innerHTML);
+  localStorage.setItem("data", listContainerNone.innerHTML);
 };
 
 const showTask = () => {
-  listContainer.innerHTML = localStorage.getItem("data");
+  listContainerNone.innerHTML = localStorage.getItem("data");
 };
 
 taskInput.addEventListener("keypress", (e) => {

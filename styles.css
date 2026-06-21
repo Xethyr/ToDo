@@ -29,6 +29,14 @@
     margin-left: 10px;
 }
 
+h3 {
+    color: #23bb19;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-left: 10px;
+}
+
 .task-input {
     display: flex;
     align-items: center;
